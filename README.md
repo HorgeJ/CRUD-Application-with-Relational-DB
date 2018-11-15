@@ -42,3 +42,10 @@ Using some boilerplate HTML we can create a file hello./html in our root directo
 </html>
 ```
 quickly test it by visiting: http://localhost.html and we should be greeted by our "Hello World" heading in the browser.
+
+## Up and Running With PHP
+PHP is the language that allows our server to generate dynamic output that could change everytime a browser requests the page. To refresh my memory of PHP I will be starting from the basics and working my way up with example programs anmd study guides.
+
+PHP files end with the .php extension and when a webserver encounters this extension ina requested file it passes it to a php processor. 
+
+My PHP practice programms and notes will be in the PHP studies directory of this repo. 
