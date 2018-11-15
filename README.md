@@ -23,3 +23,22 @@ localhost [specifies local computer]
 This should greet you with the XAMPP homepage.
 
 #### The Document Root
+The document root is the directory where a websites main documents for the domain are stored. It is the url passed to the browser without any paths ex: http://google.com or for your local server http://localhost.
+
+XAMP by default uses 
+C://xamp/htdocs
+
+To test that everything is working properly we will create the obligatory 'Hello World' file! 
+Using some boilerplate HTML we can create a file hello./html in our root directory
+
+```HTML
+<html>
+  <head>
+    <title> Test Page </title>
+  </head>
+  <body>
+    <h1> Hello World! </h1>
+  </body>
+</html>
+```
+quickly test it by visiting: http://localhost.html and we should be greeted by our "Hello World" heading in the browser.
