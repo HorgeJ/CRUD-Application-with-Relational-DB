@@ -45,6 +45,63 @@ If the backslash is followed by a special character, then the character followin
 
 * Double Quotes - In double quoted strings other escape sequences are interpreted as well any variable will be replaced by their value.
 
+### Arrays
+An array stores multiple values in one single variable.
+
+Declared as : `$phoneBook = (val1, val2, val...)`
+
+In PHP there are three types of arrays:
+* Indexed Array - Arrays with a numeric index
+* Associative Array - Arrays with named keys
+* Multidimensional Array - Arrays containing one or more arrays
+
+```
+<?php
+  $cars = array("Volvo", "BMW", "Toyota");
+  echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".";
+?> 
+```
+results: I like Volvo, BMW and Toyota. 
+
+### PHP Indexed Arrays
+The index can be assigned automatically (index always starts at 0), like this:
+```
+$cars = array("Volvo", "BMW", "Toyota");
+```
+
+or the index can be assigned manually:
+
+```
+$cars[0] = "Volvo";
+$cars[1] = "BMW";
+$cars[2] = "Toyota"; 
+```
+
+### PHP Associative Arrays
+Associative arrays are arrays that use keys that you assign to them.
+
+There are two ways to create an associative array: 
+```
+$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+```
+or: 
+
+```
+$age['Peter'] = "35";
+$age['Ben'] = "37";
+$age['Joe'] = "43"; 
+```
+
+**example:
+```PHP
+<?php
+  $age = array("Bones" => 7, "Cat" => 11, "Horge" => 30);
+  echo "Horge is " .$age.['Horge] . " years old.";
+?>
+```
+output: Horge is 30 years old.
+
+
 ### PHP Arithmetic Operators
 ```PHP
 +   //Addition 
@@ -76,9 +133,11 @@ x %= y 	x = x % y 	    //Modulus
 <= 	  Less than or equal to 	  $x <= $y 	Returns true if $x is less than or equal to $y
 ```
 
-PHP Logical Operators
+### PHP Logical Operators
 ```
 && 	And 	$x && $y 	True if both $x and $y are true
 || 	Or 	  $x || $y 	True if either $x or $y is true
 ! 	Not 	!$x 	    True if $x is not true
 ```
+
+### Concatination
