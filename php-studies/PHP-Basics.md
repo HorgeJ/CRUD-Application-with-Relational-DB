@@ -92,7 +92,7 @@ $age['Ben'] = "37";
 $age['Joe'] = "43"; 
 ```
 
-**example:
+example:
 ```PHP
 <?php
   $age = array("Bones" => 7, "Cat" => 11, "Horge" => 30);
@@ -101,6 +101,16 @@ $age['Joe'] = "43";
 ```
 output: Horge is 30 years old.
 
+### Looping Through an Associative Array
+```
+<?php
+  $age = array("Bones" => 7, "Cat" => 11, "Horge" => 30);
+  
+  foreach($age as $x => $x_value){
+    echo "Key=" . $x . ", Value=" . $x_value;
+  }
+?>
+```
 
 ### PHP Arithmetic Operators
 ```PHP
