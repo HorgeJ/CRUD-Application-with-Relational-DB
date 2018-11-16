@@ -49,3 +49,10 @@ This symbol must be placed infront of all variables. It makes the PHP parser fas
 * >= 	  Greater than or equal to 	$x >= $y 	Returns true if $x is greater than or equal to $y
 * <= 	  Less than or equal to 	  $x <= $y 	Returns true if $x is less than or equal to $y
 ```
+
+PHP Logical Operators
+```
+&& 	And 	$x && $y 	True if both $x and $y are true
+|| 	Or 	  $x || $y 	True if either $x or $y is true
+! 	Not 	!$x 	    True if $x is not true
+```
