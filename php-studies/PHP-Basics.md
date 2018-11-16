@@ -19,22 +19,48 @@ This symbol must be placed infront of all variables. It makes the PHP parser fas
 ?>
 ```
 
-### PHP Arithmetic Operators
+### String Variables
+A string is defind as a series of characters encapsulated by a set of paranthesis
+```PHP
+$fullName = "John Denver"
+echo $johnDenver;
 ```
-+   Addition 	      $x + $y   Sum of $x and $y
-- 	Subtraction 	  $x - $y 	Difference of $x and $y
-* 	Multiplication 	$x * $y 	Product of $x and $y
-/ 	Division 	      $x / $y 	Quotient of $x and $y
+This would display the contents of the fullName variable
+
+### Escape Sequences
+Used to signify that the character after the escape character should be treated specially. There are two types of escape sequences, distinguished based on the character following the escape character "backslash".
+
+If the backslash is followed by an alphanumeric character, the entire escape sequence, including the backslash, is given a meaning. For example: \n will give you a new line, and \t will give you a tab.
+
+If the backslash is followed by a special character, then the character following the backslash is parsed as it is in that location. This is the one we'll be using to show a dollar sign or a quote.
+
+* \n (linefeed)
+* \r (carriage return)
+* \\ (backslash)
+* \$ (dollar sign)
+* \" (double quote)
+
+### Quotes
+* Single Quotes - Single quoted strings are the easiest way to specify string. This method in used when we want to the string to be exactly as it is written. When string is specified in single quotes PHP will not evaluate it or interpret escape characters except single quote with backslash (‘) and backslash(\) which has to be escaped.
+
+* Double Quotes - In double quoted strings other escape sequences are interpreted as well any variable will be replaced by their value.
+
+### PHP Arithmetic Operators
+```PHP
++   //Addition 
+- 	//Subtraction 	 
+* 	//Multiplication
+/ 	//Division 	      
 ```
 
 ### PHP Assignment Operators
-```
-x = y 	x = y 	        The left operand gets set to the value of the expression on the right
-x += y 	x = x + y 	    Addition
-x -= y 	x = x - y 	    Subtraction
-x *= y 	x = x * y 	Multiplication
-x /= y 	x = x / y 	    Division
-x %= y 	x = x % y 	    Modulus
+```PHP
+x = y 	x = y 	        //The left operand gets set to the value of the expression on the right
+x += y 	x = x + y 	    //Addition
+x -= y 	x = x - y 	    //Subtraction
+x *= y 	x = x * y 	    //Multiplication
+x /= y 	x = x / y 	    //Division
+x %= y 	x = x % y 	    //Modulus
 ```
 
 ### PHP Comparison Operators
