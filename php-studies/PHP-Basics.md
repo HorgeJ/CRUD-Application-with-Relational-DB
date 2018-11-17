@@ -196,5 +196,25 @@ var_dump((bool) array());   // bool(false)
 var_dump((bool) "false");   // bool(true)
  ```
  
+ ### Functions
+ Used to seprate sections of code made to do a certain task
  
+ syntax:
+ ```
+ function functionName() {
+    code to be executed;
+} 
+ ```
+ 
+ ex:
+ ```PHP
+ <?php
+function writeMsg() {
+    echo "Hello world!";
+}
 
+writeMsg(); // call the function
+?> 
+ ```
+
+### HTML and PHP
