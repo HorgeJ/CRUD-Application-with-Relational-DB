@@ -172,3 +172,14 @@ x %= y 	x = x % y 	    //Modulus
 ```
 
 ### Concatination 
+String concatination uses the period ( . ) character to append one string to another.
+
+ex:
+```PHP
+echo "You have " . $msgs . " messages.";
+
+$bulletin .= $nesFlash;     // similar to +=
+``` 
+
+
+
