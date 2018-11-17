@@ -112,6 +112,19 @@ output: Horge is 30 years old.
 ?>
 ```
 
+### Two-Dimensional Arrays
+A multidimensional array is an array containing one or more arrays
+
+ex:
+```SQL
+<?php
+   $oxo  =  array(array('x',  '  ',  'o'),
+            array('o',  'o',  'x'),
+            array('x',  'o',  '  '));
+?>
+```
+
+
 ### PHP Arithmetic Operators
 ```PHP
 +   //Addition 
@@ -150,4 +163,4 @@ x %= y 	x = x % y 	    //Modulus
 ! 	Not 	!$x 	    True if $x is not true
 ```
 
-### Concatination
+### Concatination 
