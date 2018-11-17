@@ -19,6 +19,14 @@ This symbol must be placed infront of all variables. It makes the PHP parser fas
 ?>
 ```
 
+### Variable Naming Rules
+When naming PHP variable the follwing rules must be followed:
+* Must start with a letter or underscore ( _ )
+* Can contain only the characters  a-z,  A-Z,  0-9,  and  _(underscore).
+* Cannot contain spaces
+* Follow case sensitivity rules
+
+
 ### String Variables
 A string is defind as a series of characters encapsulated by a set of paranthesis
 ```PHP
