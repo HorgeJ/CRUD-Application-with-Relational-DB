@@ -218,3 +218,15 @@ writeMsg(); // call the function
  ```
 
 ### HTML and PHP
+PHP was designed to make building web pages easier. PHP can easily be added to HTML by using the PHP tags in conjunction with an HTML file.
+
+ex: Assuming we are using an index.html page, we should change the .html extension to .php so the server knows were working with PHP
+```html
+<div class="avatar">
+            <img src="img/logo.png" alt="Alt For Image">
+          </div>
+          <h1><?php echo "Horge Jorge"; ?></h1>
+          <p>Contact:<br />
+          <a href="mailto:">EMAIL</a></p>
+</div>
+```
