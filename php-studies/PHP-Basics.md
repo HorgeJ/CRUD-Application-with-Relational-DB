@@ -218,6 +218,8 @@ writeMsg(); // call the function
  ```
 
 ### HTML and PHP
+[date()](http://php.net/manual/en/function.date.php)
+
 PHP was designed to make building web pages easier. PHP can easily be added to HTML by using the PHP tags in conjunction with an HTML file.
 
 ex: Assuming we are using an index.html page, we should change the .html extension to .php so the server knows were working with PHP
@@ -243,3 +245,18 @@ time();
 * filemtime() - Allows you to get the timestamp of the last modification date of a specified file.
 * mktime() - Allows you to get the timestamp for a specific date and time
 * strtotime() - Parse about any English textual datetime description into a timestamp
+
+ex: current year
+```PHP
+    <section class="footer text-center">
+      &copy; <?php echo date('Y'); ?>
+    </section>
+```
+
+ex: last date modified 
+```PHP
+<?php
+// outputs e.g. 'Last modified: March 04 1998 20:43:59.'
+echo "Last modified: " . date ("F d Y H:i:s.", getlastmod());
+?> 
+```
