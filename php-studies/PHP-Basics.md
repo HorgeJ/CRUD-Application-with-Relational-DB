@@ -230,3 +230,16 @@ ex: Assuming we are using an index.html page, we should change the .html extensi
           <a href="mailto:">EMAIL</a></p>
 </div>
 ```
+
+### PHP Date and Timestamps
+Returns a string formatted according to the given format string using the given integer timestamp or the current time if no timestamp is given. In other words, timestamp is optional and defaults to the value of time(). 
+```
+time()
+```
+
+**Timestamps
+
+* getlastmod() - Gets timestamp of last page modification of current page
+* filemtime() - Allows you to get the timestamp of the last modification date of a specified file.
+* mktime() - Allows you to get the timestamp for a specific date and time
+* strtotime() - Parse about any English textual datetime description into a timestamp
