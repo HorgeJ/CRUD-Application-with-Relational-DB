@@ -280,4 +280,9 @@ Included files act as if you had pasted the code directly into the file. Any var
 * require - is identical to include except upon failure it will also produce a fatal error. In other words, it will stop the script whereas include only emits a warning which allows the script to continue.
 * require_once - identical except PHP will check if the file has already been included, and if so, not include it.
 
-
+ex:
+```PHP
+<?php include 'inc/units.php' ?> // runs and display the appropriate code from units.php
+```
+placing all our include files in an inc directory we can directly reference code blocks in our index file. 
+Styling will have to be done in the included file.
