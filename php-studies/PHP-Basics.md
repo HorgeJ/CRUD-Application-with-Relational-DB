@@ -279,3 +279,5 @@ Included files act as if you had pasted the code directly into the file. Any var
 * include_once - the only difference being that if the code from a file has already been included, it will not be included again, and include_once returns TRUE. As the name suggests, the file will be included just once.
 * require - is identical to include except upon failure it will also produce a fatal error. In other words, it will stop the script whereas include only emits a warning which allows the script to continue.
 * require_once - identical except PHP will check if the file has already been included, and if so, not include it.
+
+
