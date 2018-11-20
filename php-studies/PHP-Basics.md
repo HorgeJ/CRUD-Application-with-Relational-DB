@@ -234,7 +234,7 @@ ex: Assuming we are using an index.html page, we should change the .html extensi
 ### PHP Date and Timestamps
 Returns a string formatted according to the given format string using the given integer timestamp or the current time if no timestamp is given. In other words, timestamp is optional and defaults to the value of time(). 
 ```
-time()
+time();
 ```
 
 **Timestamps
