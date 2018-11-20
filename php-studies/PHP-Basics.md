@@ -218,7 +218,6 @@ writeMsg(); // call the function
  ```
 
 ### HTML and PHP
-[date function](http://php.net/manual/en/function.date.php)
 
 PHP was designed to make building web pages easier. PHP can easily be added to HTML by using the PHP tags in conjunction with an HTML file.
 
@@ -248,9 +247,9 @@ time();
 
 ex: current year
 ```PHP
-    <section class="footer text-center">
-      &copy; <?php echo date('Y'); ?>
-    </section>
+<section class="footer text-center">
+  &copy; <?php echo date('Y'); ?>
+</section>
 ```
 
 ex: last date modified 
