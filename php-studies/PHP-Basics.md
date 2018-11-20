@@ -262,3 +262,10 @@ ex: last date modified
   ?>
 </section>
 ```
+
+ex: Use a SINGLE date function to display today's date in the message. Use the following format: full month, day of the month with leading 0, comma and 4 digit year.
+```PHP
+<?php
+echo 'Today is ' . date("F d, Y");
+?>
+```
