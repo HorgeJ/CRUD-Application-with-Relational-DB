@@ -275,7 +275,7 @@ echo 'Today is ' . date("F d, Y");
  
 Included files act as if you had pasted the code directly into the file. Any variables that have already been defined in the main file such as display_name can be utilized and CHANGED. If the file cannot be included PHP will give an error, but continue to process the script. If you want to guarantee that the file is included before continuing on, you should use 'require'.
 
-* include - includes and evaluates the specified file.
+* (include)[http://php.net/manual/en/function.include.php] - includes and evaluates the specified file.
 * include_once - the only difference being that if the code from a file has already been included, it will not be included again, and include_once returns TRUE. As the name suggests, the file will be included just once.
 * require - is identical to include except upon failure it will also produce a fatal error. In other words, it will stop the script whereas include only emits a warning which allows the script to continue.
 * require_once - identical except PHP will check if the file has already been included, and if so, not include it.
