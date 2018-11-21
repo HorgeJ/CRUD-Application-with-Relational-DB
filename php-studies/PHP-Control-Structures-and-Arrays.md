@@ -98,11 +98,35 @@ ex:
   print_r($stack);
 ?> 
 ```
-results:Array
+results:
+```
+Array
 (
     [0] => orange
     [1] => banana
     [2] => apple
     [3] => raspberry
 )
+```
 
+#### array_unshift()
+array_unshift() prepends passed elements to the front of the array. Note that the list of elements is prepended as a whole, so that the prepended elements stay in the same order. All numerical array keys will be modified to start counting from zero while literal keys won't be changed. 
+
+ex: 
+```php
+<?php
+  $queue = array("orange", "banana");
+  array_unshift($queue, "apple", "raspberry");
+  print_r($queue);
+?> 
+```
+results:
+```
+Array
+(
+    [0] => apple
+    [1] => raspberry
+    [2] => orange
+    [3] => banana
+)
+```
