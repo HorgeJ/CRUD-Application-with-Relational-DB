@@ -79,3 +79,10 @@ Array
 )
 ```
 
+### Adding Array Elements
+three ways php gives us to add elements to an array -- two of which let you add elements to the end of the array, and one which lets you add elements to the beginning of the array. 
+
+Add a new element to the end of an array using basic array object
+```
+ $array[] = 'New Element Value';  // will append new value to the end of the array
+```
