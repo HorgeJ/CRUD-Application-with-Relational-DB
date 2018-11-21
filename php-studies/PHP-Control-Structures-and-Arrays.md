@@ -185,3 +185,85 @@ If a globalized variable is unset() inside of a function, only the local variabl
 
 unset($array); will remove your entire array.
 
+
+### Modifying an Array
+How to modify an element by specifying it's key.
+
+#### array_splice()
+Removes the elements designated by offset and length from the input array, and replaces them with the elements of the replacement array, if supplied. 
+
+ex:
+```
+<?php
+  $input = array("red", "green", "blue", "yellow");
+  array_splice($input, 2);
+  // $input is now array("red", "green")
+
+  $input = array("red", "green", "blue", "yellow");
+  array_splice($input, 1, -1);
+  // $input is now array("red", "yellow")
+
+  $input = array("red", "green", "blue", "yellow");
+  array_splice($input, 1, count($input), "orange");
+  // $input is now array("red", "orange")
+
+  $input = array("red", "green", "blue", "yellow");
+  array_splice($input, -1, 1, array("black", "maroon"));
+  // $input is now array("red", "green",
+  //          "blue", "black", "maroon")
+
+  $input = array("red", "green", "blue", "yellow");
+  array_splice($input, 3, 0, "purple");
+  // $input is now array("red", "green",
+  //          "blue", "purple", "yellow");
+?> 
+```
+
+#### array_combine()
+Creates an array by using the values from the keys array as keys and the values from the values array as the corresponding values. 
+
+ex:
+```php
+<?php
+  $a = array('green', 'red', 'yellow');
+  $b = array('avocado', 'apple', 'banana');
+  $c = array_combine($a, $b);
+  print_r($c);
+?> 
+```
+results:
+```
+Array
+(
+    [green]  => avocado
+    [red]    => apple
+    [yellow] => banana
+)
+```
+
+#### array_merge
+Merges the elements of one or more arrays together so that the values of one are appended to the end of the previous one. It returns the resulting array. 
+
+ex:
+```
+<?php
+  $array1 = array("color" => "red", 2, 4);
+  $array2 = array("a", "b", "color" => "green", "shape" => "trapezoid", 4);
+  $result = array_merge($array1, $array2);
+  print_r($result);
+?> 
+```
+
+results:
+```
+Array
+(
+    [color] => green
+    [0] => 2
+    [1] => 4
+    [2] => a
+    [3] => b
+    [shape] => trapezoid
+    [4] => 4
+)
+```
