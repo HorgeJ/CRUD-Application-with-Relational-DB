@@ -84,5 +84,25 @@ three ways php gives us to add elements to an array -- two of which let you add 
 
 Add a new element to the end of an array using basic array object
 ```
- $array[] = 'New Element Value';  // will append new value to the end of the array
+ $array[] = 'New Element Value';  // will append new value to the end of the array, must use the brackets
 ```
+
+##### array_push
+array_push() treats array as a stack, and pushes the passed variables onto the end of array. The length of array increases by the number of variables pushed.
+
+ex:
+```php
+<?php
+  $stack = array("orange", "banana");
+  array_push($stack, "apple", "raspberry");
+  print_r($stack);
+?> 
+```
+results:Array
+(
+    [0] => orange
+    [1] => banana
+    [2] => apple
+    [3] => raspberry
+)
+
