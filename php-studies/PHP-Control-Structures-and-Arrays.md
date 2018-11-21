@@ -130,3 +130,58 @@ Array
     [3] => banana
 )
 ```
+
+### Removing Array Elements
+3 ways to remove items from an array
+
+#### array_shift()
+array_shift() shifts the first value of the array off and returns it, shortening the array by one element and moving everything down. All numerical array keys will be modified to start counting from zero while literal keys won't be touched. 
+
+ex:
+```php
+<?php
+  $stack = array("orange", "banana", "apple", "raspberry");
+  $fruit = array_shift($stack);
+  print_r($stack);
+?> 
+```
+results:
+```
+Array
+(
+    [0] => banana
+    [1] => apple
+    [2] => raspberry
+)
+// orange will be assigned to $fruit
+```
+
+#### array_pop()
+array_pop() pops and returns the value of the last element of array, shortening the array by one element. 
+
+ex:
+```php
+<?php
+  $stack = array("orange", "banana", "apple", "raspberry");
+  $fruit = array_pop($stack);
+  print_r($stack);
+?> 
+```
+results:
+```
+Array
+(
+    [0] => orange
+    [1] => banana
+    [2] => apple
+)
+// raspberry will be assigned to $fruit
+```
+
+#### unset()
+unset() destroys the specified variables. 
+The behavior of unset() inside of a function can vary depending on what type of variable you are attempting to destroy. 
+If a globalized variable is unset() inside of a function, only the local variable is destroyed. The variable in the calling environment will retain the same value as before unset() was called. 
+
+unset($array); will remove your entire array.
+
