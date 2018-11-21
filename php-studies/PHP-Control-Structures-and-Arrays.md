@@ -267,3 +267,9 @@ Array
     [4] => 4
 )
 ```
+
+### Associative Arrays
+You can assign your own keys to array elements -- and they don't have to be numbers. In fact, your code can be easier to read and understand if you use a name for a key. This is called an Associative Array, because a specific key is associated with a specific value.
+
+Arrays are also referred to as a hash or dictionary 
+
