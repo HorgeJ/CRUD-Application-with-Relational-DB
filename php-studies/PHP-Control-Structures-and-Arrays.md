@@ -273,3 +273,7 @@ You can assign your own keys to array elements -- and they don't have to be numb
 
 Arrays are also referred to as a hash or dictionary 
 
+Associative arrays are arrays that use named keys that you assign to them.
+
+
+
