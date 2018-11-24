@@ -338,3 +338,65 @@ One of the extra tools arrays give us is the ability to sort. Sorting allows us 
 * If any of these sort functions evaluates two members as equal then the order is undefined (the sorting is not stable).
 
 Documentation for sorting functions can be found at: http://php.net/manual/en/array.sorting.php
+
+## Looping
+In programming, a loop is a way to repeat the same actions a certain number of times, or until a certain condition is true. Instead of typing the exact same code, a loop will allow us to write that code one time then repeat that code WHILE a condition is true.
+
+### While Loop
+while loops are the simplest type of loop in PHP. They behave just like their C counterparts. The basic form of a while statement is:
+```
+while (expr)
+    statement
+```
+The meaning of a while statement is simple. It tells PHP to execute the nested statement(s) repeatedly, as long as the while expression evaluates to TRUE. The value of the expression is checked each time at the beginning of the loop, so even if this value changes during the execution of the nested statement(s), execution will not stop until the end of the iteration (each time PHP runs the statements in the loop is one iteration). Sometimes, if the while expression evaluates to FALSE from the very beginning, the nested statement(s) won't even be run once. 
+
+The following examples are identical, and both print the numbers 1 through 10: 
+```PHP
+<?php
+/* example 1 */
+
+$i = 1;
+while ($i <= 10) {
+    echo $i++;  /* the printed value would be
+                   $i before the increment
+                   (post-increment) */
+}
+
+/* example 2 */
+
+$i = 1;
+while ($i <= 10):
+    echo $i;
+    $i++;
+endwhile;
+?> 
+```
+
+### do-while
+do-while loops are very similar to while loops, except the truth expression is checked at the end of each iteration instead of in the beginning. The main difference from regular while loops is that the first iteration of a do-while loop is guaranteed to run (the truth expression is only checked at the end of the iteration), whereas it may not necessarily run with a regular while loop (the truth expression is checked at the beginning of each iteration, if it evaluates to FALSE right from the beginning, the loop execution would end immediately). 
+
+There is just one syntax for do-while loops: 
+```php
+<?php
+$i = 0;
+do {
+    echo $i;
+} while ($i > 0);
+?> 
+```
+The above loop would run one time exactly, since after the first iteration, when truth expression is checked, it evaluates to FALSE ($i is not bigger than 0) and the loop execution ends. 
+
+### Looping through arrays with each and list
+
+```
+$learn = array('Conditionals', 'Arrays', 'Loops');
+$learn[] = 'Build something awesome!';
+array_push($learn, 'Functions', 'Forms', 'Objects');
+array_unshift($learn, 'HTML', 'CSS');
+asort($learn);
+
+$count = 0;
+while((list($key, $val) = each($learn)) && $count++ < 2){
+  echo "$key => $val\n"
+} //this returns the first two items in the list
+```
