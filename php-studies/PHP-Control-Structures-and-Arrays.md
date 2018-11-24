@@ -328,3 +328,12 @@ $taskList = array($task1);
 $taskNames['Task 1'] = $task1;
 ```
 
+### Sorting Arrays 
+One of the extra tools arrays give us is the ability to sort. Sorting allows us to organize large amounts of data. We can sort by key or value.
+
+* Some sort based on the array keys, whereas others by the values: $array['key'] = 'value';
+* Whether or not the correlation between the keys and values are maintained after the sort, which may mean the keys are reset numerically (0,1,2 ...)
+* The order of the sort: alphabetical, low to high (ascending), high to low (descending), numerical, natural, random, or user defined
+* Note: All of these sort functions act directly on the array variable itself, as opposed to returning a new sorted array
+* If any of these sort functions evaluates two members as equal then the order is undefined (the sorting is not stable).
+
