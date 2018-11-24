@@ -337,3 +337,4 @@ One of the extra tools arrays give us is the ability to sort. Sorting allows us 
 * Note: All of these sort functions act directly on the array variable itself, as opposed to returning a new sorted array
 * If any of these sort functions evaluates two members as equal then the order is undefined (the sorting is not stable).
 
+Documentation for sorting functions can be found at: http://php.net/manual/en/array.sorting.php
