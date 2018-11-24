@@ -445,3 +445,18 @@ for ($letter = 'A'; $letter != 'AA'; $letter++) {
    echo $letter."<br />";
 }
 ```
+
+### foreach
+The foreach construct provides an easy way to iterate over arrays. foreach works only on arrays and objects, and will issue an error when you try to use it on a variable with a different data type or an uninitialized variable. 
+
+There are two syntaxes:
+```
+foreach (array_expression as $value)
+    statement
+    
+foreach (array_expression as $key => $value)
+    statement
+```
+The first form loops over the array given by array_expression. On each iteration, the value of the current element is assigned to $value and the internal array pointer is advanced by one (so on the next iteration, you'll be looking at the next element). 
+The second form will additionally assign the current element's key to the $key variable on each iteration. 
+
