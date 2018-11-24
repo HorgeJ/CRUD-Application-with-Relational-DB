@@ -434,3 +434,14 @@ for ($i = 1; ; $i++) {
   }
 ?> 
 ```
+ex: Single line for loop
+```
+for($year = date('Y')-100; ++$year <= date('Y'); print $year."<br />");
+```
+
+ex: Looping through letters
+```
+for ($letter = 'A'; $letter != 'AA'; $letter++) {
+   echo $letter."<br />";
+}
+```
