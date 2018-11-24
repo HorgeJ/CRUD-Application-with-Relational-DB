@@ -400,3 +400,37 @@ while((list($key, $val) = each($learn)) && $count++ < 2){
   echo "$key => $val\n"
 } //this returns the first two items in the list
 ```
+
+### For Loop
+for loops are the most complex loops in PHP. They behave like their C counterparts. The syntax of a for loop is:
+```
+for (expr1; expr2; expr3)
+    statement
+```
+The first expression (expr1) is evaluated (executed) once unconditionally at the beginning of the loop. 
+In the beginning of each iteration, expr2 is evaluated. If it evaluates to TRUE, the loop continues and the nested statement(s) are executed. If it evaluates to FALSE, the execution of the loop ends. 
+
+At the end of each iteration, expr3 is evaluated (executed). 
+
+Each of the expressions can be empty or contain multiple expressions separated by commas. In expr2, all expressions separated by a comma are evaluated but the result is taken from the last part. expr2 being empty means the loop should be run indefinitely (PHP implicitly considers it as TRUE, like C). This may not be as useless as you might think, since often you'd want to end the loop using a conditional break statement instead of using the for truth expression. 
+
+Consider the following examples. 
+All of them display the numbers 1 through 10: 
+```
+<?php
+/* example 1 */
+
+  for ($i = 1; $i <= 10; $i++) {
+    echo $i;
+}
+
+/* example 2 */
+
+for ($i = 1; ; $i++) {
+    if ($i > 10) {
+        break;
+    }
+    echo $i;
+  }
+?> 
+```
