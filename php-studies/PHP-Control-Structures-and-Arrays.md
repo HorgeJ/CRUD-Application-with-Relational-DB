@@ -275,5 +275,56 @@ Arrays are also referred to as a hash or dictionary
 
 Associative arrays are arrays that use named keys that you assign to them.
 
+ex: Creating an associative array
+```
+$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+```
+or:
+```
+$age['Peter'] = "35";
+$age['Ben'] = "37";
+$age['Joe'] = "43"; 
+```
 
+ex: using the keys in a script
+```
+<?php
+  $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+  
+  echo "Peter is " . &age['Peter'] . " years old.";
+?>
+```
+
+#### Extract
+You can use the extract function to extract the key value pairs as individual variables.
+
+```
+$var_array = array("color" => "blue",
+                   "size"  => "medium",
+                   "shape" => "sphere");
+extract($var_array);
+```
+
+Gives us the variables:
+```
+$color = "blue", $size = "medium", and $shape = "sphere".
+```
+
+### Multidimensional Arrays
+In a multidimensional array, a key in the outer array contains a secondary inner array. Multidimensional arrays may have indexed or named keys.
+
+ex:
+```
+$task1 = array(
+   'title' => 'Laundry',
+   'priority' => 2,
+   'due' => '',
+   'complete' => true,
+);
+```
+ex: returning "Laundry"
+```
+$taskList = array($task1);
+$taskNames['Task 1'] = $task1;
+```
 
