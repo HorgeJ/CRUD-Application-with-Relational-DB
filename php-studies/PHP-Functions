@@ -1,0 +1,14 @@
+## PHP Functions
+Blocks of code that we are able to reuse by just calling them. Made of up user defined functions and system functions.
+
+### User Defined Functions
+A function may be defined using syntax such as the following: 
+```PHP
+<?php
+  function foo($arg_1, $arg_2, /* ..., */ $arg_n)
+  {
+      echo "Example function.\n";
+      return $retval;
+}
+?>
+```
