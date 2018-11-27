@@ -187,3 +187,45 @@ ex:
   echo strlen($str); // 7
 ?> 
 ```
+
+### substr()
+Returns the portion of string specified by the start and length parameters. 
+
+```
+string substr ( string $string , int $start [, int $length ] )
+```
+
+The input string. Must be one character or longer. 
+
+If start is non-negative, the returned string will start at the start'th position in string, counting from zero. For instance, in the string 'abcdef', the character at position 0 is 'a', the character at position 2 is 'c', and so forth. 
+
+If start is negative, the returned string will start at the start'th character from the end of string. 
+
+If string is less than start characters long, FALSE will be returned.
+
+Example #1 Using a negative start:
+```php
+<?php
+  $rest = substr("abcdef", -1);    // returns "f"
+  $rest = substr("abcdef", -2);    // returns "ef"
+  $rest = substr("abcdef", -3, 1); // returns "d"
+?> 
+```
+
+If length is given and is positive, the string returned will contain at most length characters beginning from start (depending on the length of string). 
+
+If length is given and is negative, then that many characters will be omitted from the end of string (after the start position has been calculated when a start is negative). If start denotes the position of this truncation or beyond, FALSE will be returned.
+
+If length is given and is 0, FALSE or NULL, an empty string will be returned. 
+
+If length is omitted, the substring starting from start until the end of the string will be returned. 
+
+Example #2 Using a negative length:
+```php
+<?php
+  $rest = substr("abcdef", 0, -1);  // returns "abcde"
+  $rest = substr("abcdef", 2, -1);  // returns "cde"
+  $rest = substr("abcdef", 4, -4);  // returns false
+  $rest = substr("abcdef", -3, -1); // returns "de"
+?> 
+```
