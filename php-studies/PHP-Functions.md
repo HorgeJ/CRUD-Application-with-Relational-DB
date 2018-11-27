@@ -229,3 +229,59 @@ Example #2 Using a negative length:
   $rest = substr("abcdef", -3, -1); // returns "de"
 ?> 
 ```
+
+### strpos()
+Find the numeric position of the first occurrence of needle in the haystack string.
+
+```
+int strpos ( string $haystack , mixed $needle [, int $offset = 0 ] )
+```
+
+* haystack: The string to search in
+* needle: If needle is not a string, it is converted to an integer and applied as the ordinal value of a character. 
+* offset: If specified, search will start this number of characters counted from the beginning of the string. If the offset is negative, the search will start this number of characters counted from the end of the string. 
+
+Example #1 Using === :
+```php
+<?php
+  $mystring = 'abc';
+  $findme   = 'a';
+  $pos = strpos($mystring, $findme);
+
+  // Note our use of ===.  Simply == would not work as expected
+  // because the position of 'a' was the 0th (first) character.
+  if ($pos === false) {
+      echo "The string '$findme' was not found in the string '$mystring'";
+  } else {
+      echo "The string '$findme' was found in the string '$mystring'";
+      echo " and exists at position $pos";
+  }
+?> 
+```
+Example #2 Using !== :
+```php
+<?php
+  $mystring = 'abc';
+  $findme   = 'a';
+  $pos = strpos($mystring, $findme);
+
+  // The !== operator can also be used.  Using != would not work as expected
+  // because the position of 'a' is 0. The statement (0 != false) evaluates 
+  // to false.
+  if ($pos !== false) {
+       echo "The string '$findme' was found in the string '$mystring'";
+           echo " and exists at position $pos";
+  } else {
+       echo "The string '$findme' was not found in the string '$mystring'";
+  }
+?> 
+```
+
+Example #3 Using an offset
+```php
+<?php
+  // We can search for the character, ignoring anything before the offset
+  $newstring = 'abcdef abcdef';
+  $pos = strpos($newstring, 'a', 1); // $pos = 7, not 0
+?> 
+```
