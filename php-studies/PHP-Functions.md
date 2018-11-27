@@ -285,3 +285,103 @@ Example #3 Using an offset
   $pos = strpos($newstring, 'a', 1); // $pos = 7, not 0
 ?> 
 ```
+
+### array_keys()
+ array_keys() returns the keys, numeric and string, from the array.
+
+If the optional search_value is specified, then only the keys for that value are returned. Otherwise, all the keys from the array are returned. 
+
+```
+array array_keys ( array $array [, mixed $search_value [, bool $strict = FALSE ]] )
+```
+
+
+* array: An array containing keys to return.
+* search_value: If specified, then only keys containing these values are returned.
+* strict: Determines if strict comparison (===) should be used during the search.
+
+array_keys() example:
+```php
+<?php
+  $array = array(0 => 100, "color" => "red");
+  print_r(array_keys($array));
+
+  $array = array("blue", "red", "green", "blue", "blue");
+  print_r(array_keys($array, "blue"));
+
+  $array = array("color" => array("blue", "red", "green"),
+                 "size"  => array("small", "medium", "large"));
+  print_r(array_keys($array));
+?>
+```
+results:
+```
+Array
+(
+    [0] => 0
+    [1] => color
+)
+Array
+(
+    [0] => 0
+    [1] => 3
+    [2] => 4
+)
+Array
+(
+    [0] => color
+    [1] => size
+)
+```
+
+### array_walk()
+array_walk — Apply a user supplied function to every member of an array
+
+```
+bool array_walk ( array &$array , callable $callback [, mixed $userdata = NULL ] )
+```
+Applies the user-defined callback function to each element of the array array.
+
+* array: The input array.
+* callback: Typically, callback takes on two parameters. The array parameter's value being the first, and the key/index second. 
+* userdata: If the optional userdata parameter is supplied, it will be passed as the third parameter to the callback.
+
+array_walk() example:
+```php
+<?php
+  $fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
+
+  function test_alter(&$item1, $key, $prefix)
+  {
+      $item1 = "$prefix: $item1";
+  }
+
+  function test_print($item2, $key)
+  {
+      echo "$key. $item2<br />\n";
+  }
+
+  echo "Before ...:\n";
+  array_walk($fruits, 'test_print');
+
+  array_walk($fruits, 'test_alter', 'fruit');
+  echo "... and after:\n";
+
+  array_walk($fruits, 'test_print');
+?>
+```
+
+results:
+```
+Before ...:
+d. lemon
+a. orange
+b. banana
+c. apple
+... and after:
+d. fruit: lemon
+a. fruit: orange
+b. fruit: banana
+c. fruit: apple
+```
+
