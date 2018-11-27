@@ -151,3 +151,17 @@ PHP supports the concept of variable functions. This means that if a variable na
   $func('test');  // This calls echoit()
 ?> 
 ```
+
+### Anonymous functions
+Anonymous functions, also known as closures, allow the creation of functions which have no specified name. They are most useful as the value of callback parameters, but they have many other uses. 
+Anonymous functions are implemented using the Closure class. 
+
+Anonymous function example:
+```
+<?php
+  echo preg_replace_callback('~-([a-z])~', function ($match) {
+      return strtoupper($match[1]);
+  }, 'hello-world');
+  // outputs helloWorld
+?> 
+```
