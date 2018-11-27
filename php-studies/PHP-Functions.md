@@ -165,3 +165,25 @@ Anonymous function example:
   // outputs helloWorld
 ?> 
 ```
+
+## Internal (built-in) Functions
+PHP comes standard with many functions and constructs.
+
+### strlen()
+strlen — Get string length
+
+Returns the length of the given string:
+```
+int strlen ( string $string );
+```
+
+ex:
+```php
+<?php
+  $str = 'abcdef';
+  echo strlen($str); // 6
+
+  $str = ' ab cd ';
+  echo strlen($str); // 7
+?> 
+```
