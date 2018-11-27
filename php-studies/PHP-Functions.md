@@ -94,3 +94,29 @@ print_r(), var_dump() and var_export() will also show protected and private prop
 
 If given a string, integer or float, the value itself will be printed. If given an array, values will be presented in a format that shows keys and elements. Similar notation is used for objects. 
 When the return parameter is TRUE, this function will return a string. Otherwise, the return value is TRUE. 
+
+print_r() example:
+```php
+<pre>
+  <?php
+    $a = array ('a' => 'apple', 'b' => 'banana', 'c' => array ('x', 'y', 'z'));
+    print_r ($a);
+  ?>
+</pre> 
+```
+result:
+```
+<pre>
+Array
+(
+    [a] => apple
+    [b] => banana
+    [c] => Array
+        (
+            [0] => x
+            [1] => y
+            [2] => z
+        )
+)
+</pre>
+```
