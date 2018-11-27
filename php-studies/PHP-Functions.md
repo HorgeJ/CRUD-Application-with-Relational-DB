@@ -120,3 +120,34 @@ Array
 )
 </pre>
 ```
+
+### Variable Functions
+PHP supports the concept of variable functions. This means that if a variable name has parentheses appended to it, PHP will look for a function with the same name as whatever the variable evaluates to, and will attempt to execute it. Among other things, this can be used to implement callbacks, function tables, and so forth. 
+
+```php
+<?php
+  function foo() {
+      echo "In foo()<br />\n";
+  }
+
+  function bar($arg = '')
+  {
+      echo "In bar(); argument was '$arg'.<br />\n";
+  }
+
+  // This is a wrapper function around echo
+  function echoit($string)
+  {
+      echo $string;
+  }
+
+  $func = 'foo';
+  $func();        // This calls foo()
+
+  $func = 'bar';
+  $func('test');  // This calls bar()
+
+  $func = 'echoit';
+  $func('test');  // This calls echoit()
+?> 
+```
