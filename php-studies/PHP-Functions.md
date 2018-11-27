@@ -51,3 +51,23 @@ Example #2 Passing function parameters by reference:
 ?> 
 ```
 
+### Default Arguments
+A function may define C++-style default values for scalar arguments as follows: 
+```php
+<?php
+  function makecoffee($type = "cappuccino")
+  {
+      return "Making a cup of $type.\n";
+  }
+  echo makecoffee();
+  echo makecoffee(null);
+  echo makecoffee("espresso");
+?> 
+```
+The above example will output:
+```
+Making a cup of cappuccino.
+Making a cup of .
+Making a cup of espresso.
+```
+
