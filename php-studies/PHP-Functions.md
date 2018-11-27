@@ -71,3 +71,26 @@ Making a cup of .
 Making a cup of espresso.
 ```
 
+### Returning Values
+Values are returned by using the optional return statement. Any type may be returned, including arrays and objects. This causes the function to end its execution immediately and pass control back to the line from which it was called.
+
+Note: If return is omitted, NULL is returned
+
+```php
+<?php
+function square($num)
+  {
+      return $num * $num;
+  }
+  echo square(4);   // outputs '16'.
+?> 
+```
+
+### print_r
+print_r — Prints human-readable information about a variable 
+
+print_r() displays information about a variable in a way that's readable by humans. 
+print_r(), var_dump() and var_export() will also show protected and private properties of objects. Static class members will not be shown. 
+
+If given a string, integer or float, the value itself will be printed. If given an array, values will be presented in a format that shows keys and elements. Similar notation is used for objects. 
+When the return parameter is TRUE, this function will return a string. Otherwise, the return value is TRUE. 
